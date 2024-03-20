@@ -1,14 +1,46 @@
-version: '3.8'
-
-services:
-  db:
-    image: mysql:8.0
-    command: --default-authentication-plugin=mysql_native_password
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-    ports:
-      - "3306:3306"
+#version: '3.8'
+#  ----SERVICES----
+#services:
+# ----MySQL----
+#  mysql-db:
+#    image: mysql:8.0
+#    command: --default-authentication-plugin=mysql_native_password
+#    restart: always
+#    environment:
+#      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+#      MYSQL_DATABASE: ${MYSQL_DATABASE}
+#      MYSQL_USER: ${MYSQL_USER}
+#      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+#    ports:
+#      - "3306:3306"
+# ----PostgreSQL----
+#    postgre-db:
+#      image: postgres
+#      restart: always
+#      container_name: "kafka-example-db"
+#      ports:
+#        - "5432:5432"
+#      environment:
+#        POSTGRES_PASSWORD: example
+#        POSTGRES_USER: example
+#        POSTGRES_DB: kafka_example
+# ----Elasticsearh----
+#  elasticsearch:
+#    image: elasticsearch:8.8.0
+#    environment:
+#      - discovery.type=single-node
+#      - validate_after_inactivity=0
+#      - max_open_files=65536
+#      - max_content_length_in_bytes=100000000
+#      - transport.host=elasticsearch
+#      - xpack.security.enabled=false
+#    volumes:
+#      - $HOME/app:/var/app
+#    networks:
+#      - my-network
+#    ports:
+#      - "9200:9200"
+#      - "9300:9300"
+#
+#networks:
+#    my-network:
