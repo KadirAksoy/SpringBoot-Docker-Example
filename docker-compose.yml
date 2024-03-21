@@ -35,7 +35,7 @@
 #      - transport.host=elasticsearch
 #      - xpack.security.enabled=false
 #    volumes:
-#      - $HOME/app:/var/app
+#      - $HOME/app:/var/app        // Volumes -> verileri kaydeder.
 #    networks:
 #      - my-network
 #    ports:
