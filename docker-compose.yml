@@ -174,3 +174,10 @@
 #    restart: always
 #    ports:
 #      - 8001:8080  # Adminer'a disaridan erisim saglar.
+
+
+  # zipkin:
+  #   image: openzipkin/zipkin
+  #   container_name: zipkin
+  #   ports:
+  #     - "9411:9411"
